@@ -10,14 +10,14 @@ namespace Builder
             var maker = new SandwichMaker(builder);
             maker.CreateSandwich();
             var sandwich = builder.GetSandwich();
-
             sandwich.Display();
 
-            var builder2 = new SandwichBuilder();
+            Console.WriteLine();
+
+            var builder2 = new ClubSandwichBuilder();
             var maker2 = new SandwichMaker(builder2);
             maker2.CreateSandwich();
-            var sandwich2 = builder.GetSandwich();
-
+            var sandwich2 = builder2.GetSandwich();
             sandwich2.Display();
 
             Console.ReadKey();
