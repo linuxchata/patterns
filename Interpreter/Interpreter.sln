@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{8FE069B7-0840-401E-9AD2-D7E4879F1B17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FE069B7-0840-401E-9AD2-D7E4879F1B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE069B7-0840-401E-9AD2-D7E4879F1B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE069B7-0840-401E-9AD2-D7E4879F1B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE069B7-0840-401E-9AD2-D7E4879F1B17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
