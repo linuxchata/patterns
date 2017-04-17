@@ -2,6 +2,9 @@
 
 namespace Factory
 {
+    /// <summary>
+    /// A 'ConcreteProductB' class
+    /// </summary>
     public class MiniCooperSport : IAuto
     {
         public void TurnOn()

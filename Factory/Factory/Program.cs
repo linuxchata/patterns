@@ -7,6 +7,13 @@ namespace Factory
 {
     public class Program
     {
+        /// <summary>
+        /// Factory Method
+        /// Define an interface for creating an object, but let subclasses decide which class to instantiate.
+        /// Factory Method lets a class defer instantiation to subclasses.
+        /// Abstract Factory
+        /// Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+        /// </summary>
         public static void Main(string[] args)
         {
             var carName = "minicooper";
@@ -62,8 +69,8 @@ namespace Factory
 
         private static IAutoFactory LoadFactory()
         {
-            var car = System.Configuration.ConfigurationManager.AppSettings["Auto"];
-            return Assembly.GetExecutingAssembly().CreateInstance(car) as IAutoFactory;
+            var autoFactory = System.Configuration.ConfigurationManager.AppSettings["Auto"];
+            return Assembly.GetExecutingAssembly().CreateInstance(autoFactory) as IAutoFactory;
         }
 
         private static IAbstractFactory LoadAbstractFactory()

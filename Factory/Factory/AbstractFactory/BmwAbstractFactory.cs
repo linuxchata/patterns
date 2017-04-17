@@ -2,6 +2,9 @@
 
 namespace Factory.AbstractFactory
 {
+    /// <summary>
+    /// The 'ConcreteFactory' class
+    /// </summary>
     public class BmwAbstractFactory : IAbstractFactory
     {
         public IAuto CreateEconomyCar()

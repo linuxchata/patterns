@@ -1,6 +1,9 @@
 ﻿namespace Factory.AbstractFactory
 {
-    public class MinCooperAbstractFactory : IAbstractFactory
+    /// <summary>
+    /// The 'ConcreteFactory' class
+    /// </summary>
+    public class MiniCooperAbstractFactory : IAbstractFactory
     {
         public IAuto CreateEconomyCar()
         {

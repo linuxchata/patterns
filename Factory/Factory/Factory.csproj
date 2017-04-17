@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\MinCooperAbstractFactory.cs" />
+    <Compile Include="AbstractFactory\MiniCooperAbstractFactory.cs" />
     <Compile Include="AbstractFactory\BmwAbstractFactory.cs" />
     <Compile Include="AbstractFactory\IAbstractFactory.cs" />
     <Compile Include="BmwI7.cs" />
@@ -58,7 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AbstractFactory\ClassDiagram.cd" />
     <None Include="app.config" />
+    <None Include="FactoryMethod\ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,6 +2,9 @@
 
 namespace Factory
 {
+    /// <summary>
+    /// A 'ConcreteProductA' class
+    /// </summary>
     public class BmwI7 : IAuto
     {
         public void TurnOn()
