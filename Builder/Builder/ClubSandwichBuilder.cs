@@ -1,6 +1,9 @@
 ﻿namespace Builder
 {
-    public class ClubSandwichBuilder : Builder
+    /// <summary>
+    /// The 'ConcreteBuilder' class
+    /// </summary>
+    public sealed class ClubSandwichBuilder : Builder
     {
         public override void PrepareBread()
         {

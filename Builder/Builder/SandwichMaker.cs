@@ -1,6 +1,9 @@
 ﻿namespace Builder
 {
-    public class SandwichMaker
+    /// <summary>
+    /// The 'Director' class
+    /// </summary>
+    public sealed class SandwichMaker
     {
         private readonly Builder builder;
 

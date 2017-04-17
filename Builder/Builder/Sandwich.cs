@@ -2,7 +2,10 @@
 
 namespace Builder
 {
-    public class Sandwich
+    /// <summary>
+    /// The 'Product' class
+    /// </summary>
+    public sealed class Sandwich
     {
         public BreadType BreadType { get; set; }
 

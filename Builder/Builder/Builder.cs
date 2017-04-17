@@ -1,6 +1,8 @@
-﻿
-namespace Builder
+﻿namespace Builder
 {
+    /// <summary>
+    /// The 'Builder' abstract class
+    /// </summary>
     public abstract class Builder
     {
         protected Sandwich Sandwich;
