@@ -2,7 +2,7 @@
 {
     public sealed class SingletonLazy
     {
-        public SingletonLazy()
+        private SingletonLazy()
         {
         }
 

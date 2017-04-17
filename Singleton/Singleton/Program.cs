@@ -3,7 +3,10 @@ using System.Threading.Tasks;
 
 namespace Singleton
 {
-    // http://csharpindepth.com/articles/general/singleton.aspx
+    /// <summary>
+    /// Ensure a class has only one instance and provide a global point of access to it.
+    /// http://csharpindepth.com/articles/general/singleton.aspx
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
@@ -11,8 +14,9 @@ namespace Singleton
             Console.WriteLine("Simple Singleton");
             var simpleSingleton = Singleton.Instance;
             Console.WriteLine(simpleSingleton.GetHashCode());
-            Console.WriteLine(simpleSingleton.GetHashCode());
-            Console.WriteLine(simpleSingleton.GetHashCode());
+            Console.WriteLine(Singleton.Instance.GetHashCode());
+            Console.WriteLine(Singleton.Instance.GetHashCode());
+            Console.WriteLine(Singleton.Instance.GetHashCode());
             Console.WriteLine();
 
             Console.WriteLine("Singleton Lock");
