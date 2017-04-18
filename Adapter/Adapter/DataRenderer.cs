@@ -3,6 +3,9 @@ using System.IO;
 
 namespace Adapter
 {
+    /// <summary>
+    /// The 'Target' class
+    /// </summary>
     public class DataRenderer
     {
         private readonly IDbDataAdapter adapter;

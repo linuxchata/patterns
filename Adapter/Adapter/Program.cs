@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Data.SqlServerCe;
 using System.IO;
+using Adapter.SimpleAdapter;
 
 namespace Adapter
 {
-    class Program
+    /// <summary>
+    /// Convert the interface of a class into another interface clients expect.
+    /// Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var adapter = new StubAdapter();
 
@@ -32,6 +37,14 @@ namespace Adapter
             };
             var patternRendered = new PatternRenderer();
             Console.WriteLine(patternRendered.PatternsList(list));
+
+            Console.WriteLine("Simple adapter pattern");
+            Target target = new Target();
+            target.Request();
+
+            var adaptee = new Adapter.SimpleAdapter.Adaptee();
+            target = new Adapter.SimpleAdapter.Adapter(adaptee);
+            target.Request();
 
             Console.ReadKey();
         }

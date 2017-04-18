@@ -2,6 +2,9 @@
 
 namespace Adapter
 {
+    /// <summary>
+    /// The 'Adapter' class
+    /// </summary>
     public class StubAdapter : IDbDataAdapter
     {
         public int Fill(DataSet dataSet)
