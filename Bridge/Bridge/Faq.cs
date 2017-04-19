@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 namespace Bridge
 {
-    public class Faq : Manuscript
+    /// <summary>
+    /// The 'RefinedAbstraction' class
+    /// </summary>
+    public sealed class Faq : Manuscript
     {
         public Faq(IFormatter formatter)
             : base(formatter)

@@ -1,6 +1,9 @@
 ﻿namespace Bridge
 {
-    public class Formatter : IFormatter
+    /// <summary>
+    /// The 'ConcreteImplementorA' class
+    /// </summary>
+    public sealed class Formatter : IFormatter
     {
         public string Format(string key, string value)
         {

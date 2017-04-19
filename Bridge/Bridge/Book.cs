@@ -2,7 +2,10 @@
 
 namespace Bridge
 {
-    public class Book : Manuscript
+    /// <summary>
+    /// The 'RefinedAbstraction' class
+    /// </summary>
+    public sealed class Book : Manuscript
     {
         public Book(IFormatter formatter)
             : base(formatter)

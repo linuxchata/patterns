@@ -2,7 +2,10 @@
 
 namespace Bridge
 {
-    public class ReverseFormatter : IFormatter
+    /// <summary>
+    /// The 'ConcreteImplementorB' class
+    /// </summary>
+    public sealed class ReverseFormatter : IFormatter
     {
         public string Format(string key, string value)
         {

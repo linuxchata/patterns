@@ -3,9 +3,12 @@ using System.Collections.Generic;
 
 namespace Bridge
 {
-    class Program
+    /// <summary>
+    /// Decouple an abstraction from its implementation so that the two can vary independently.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var list = new List<Manuscript>();
             var formatter = new ReverseFormatter();

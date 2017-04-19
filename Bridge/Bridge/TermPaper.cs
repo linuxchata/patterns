@@ -2,7 +2,10 @@
 
 namespace Bridge
 {
-    public class TermPaper : Manuscript
+    /// <summary>
+    /// The 'RefinedAbstraction' class
+    /// </summary>
+    public sealed class TermPaper : Manuscript
     {
         public TermPaper(IFormatter formatter)
             : base(formatter)
