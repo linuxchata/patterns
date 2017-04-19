@@ -2,7 +2,10 @@
 
 namespace Decorator.ConcreateComponent
 {
-    public class LargePizza : Pizza
+    /// <summary>
+    /// The 'ConcreteComponent' class
+    /// </summary>
+    public sealed class LargePizza : Pizza
     {
         public override string Description
         {

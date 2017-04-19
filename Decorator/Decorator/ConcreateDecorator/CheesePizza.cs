@@ -3,6 +3,9 @@ using Decorator.Decorator;
 
 namespace Decorator.ConcreateDecorator
 {
+    /// <summary>
+    /// The 'ConcreteDecoratorA' class
+    /// </summary>
     public sealed class CheesePizza : PizzaDecorator
     {
         public CheesePizza(Pizza pizza)

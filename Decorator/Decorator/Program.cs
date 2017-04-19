@@ -5,6 +5,10 @@ using Decorator.ConcreateDecorator;
 
 namespace Decorator
 {
+    /// <summary>
+    /// Attach additional responsibilities to an object dynamically.
+    /// Decorators provide a flexible alternative to subclassing for extending functionality.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)

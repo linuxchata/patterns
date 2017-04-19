@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Decorator.Component.Pizza">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Component\Pizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.ConcreateComponent.LargePizza">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreateComponent\LargePizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.ConcreateComponent.MediumPizza">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreateComponent\MediumPizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.ConcreateComponent.SmallPizza">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreateComponent\SmallPizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.ConcreateDecorator.CheesePizza">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreateDecorator\CheesePizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.ConcreateDecorator.HamPizza">
+    <Position X="9" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreateDecorator\HamPizza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decorator.Decorator.PizzaDecorator">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorator\PizzaDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

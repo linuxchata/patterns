@@ -3,7 +3,10 @@ using Decorator.Decorator;
 
 namespace Decorator.ConcreateDecorator
 {
-    public class HamPizza : PizzaDecorator
+    /// <summary>
+    /// The 'ConcreteDecoratorB' class
+    /// </summary>
+    public sealed class HamPizza : PizzaDecorator
     {
         public HamPizza(Pizza pizza) : base(pizza)
         {

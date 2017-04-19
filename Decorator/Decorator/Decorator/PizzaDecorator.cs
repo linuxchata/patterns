@@ -2,6 +2,9 @@
 
 namespace Decorator.Decorator
 {
+    /// <summary>
+    /// The 'Decorator' abstract class
+    /// </summary>
     public abstract class PizzaDecorator : Pizza
     {
         protected readonly Pizza Pizza;
