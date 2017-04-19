@@ -11,13 +11,13 @@ namespace Flyweight
 
         public static void Main(string[] args)
         {
-            for (var i = 0; i < 200; i++)
+            for (var i = 0; i < 20; i++)
             {
                 var tile = TileFactory.GeTile(TileFactory.Ceramic);
                 tile.Draw(GetRandom(), GetRandom(), GetRandom(), GetRandom());
             }
 
-            for (var i = 0; i < 200; i++)
+            for (var i = 0; i < 20; i++)
             {
                 var tile = TileFactory.GeTile(TileFactory.Stone);
                 tile.Draw(GetRandom(), GetRandom(), GetRandom(), GetRandom());

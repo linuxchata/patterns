@@ -5,7 +5,7 @@ namespace Flyweight
     /// <summary>
     /// The 'ConcreteFlyweight' class
     /// </summary>
-    public class StoneTile : ITile
+    public sealed class StoneTile : ITile
     {
         public static int Counter = 0;
 
