@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Proxy
 {
+    /// <summary>
+    /// The 'Proxy' class
+    /// </summary>
     public class CachedAuthenticationService : IAuthenticationService
     {
         private readonly AuthenticationService authenticationService;

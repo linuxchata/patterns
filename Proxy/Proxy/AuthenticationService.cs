@@ -2,6 +2,9 @@
 
 namespace Proxy
 {
+    /// <summary>
+    /// The 'RealSubject' class
+    /// </summary>
     public class AuthenticationService : IAuthenticationService
     {
         public bool IsAuthenticated(string userName)

@@ -2,6 +2,9 @@
 
 namespace Proxy
 {
+    /// <summary>
+    /// Provide a surrogate or placeholder for another object to control access to it.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
