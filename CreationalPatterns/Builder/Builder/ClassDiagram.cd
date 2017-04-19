@@ -6,6 +6,9 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAAAAAAA=</HashCode>
       <FileName>SandwichMaker.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="builder" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Builder.Builder">
     <Position X="3.25" Y="0.5" Width="2" />
@@ -13,6 +16,9 @@
       <HashCode>AAAAQAAAAAAAAAAAAAAAAQAABAAAAEAAABAAAAAAAAA=</HashCode>
       <FileName>Builder.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Sandwich" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Builder.ClubSandwichBuilder">
     <Position X="4.5" Y="3.25" Width="2" />
