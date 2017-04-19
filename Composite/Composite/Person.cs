@@ -2,7 +2,10 @@
 
 namespace Composite
 {
-    public class Person : IParty
+    /// <summary>
+    /// The 'Leaf' class
+    /// </summary>
+    public sealed class Person : IParty
     {
         public string Name { get; set; }
 

@@ -2,6 +2,10 @@
 
 namespace Composite
 {
+    /// <summary>
+    /// Compose objects into tree structures to represent part-whole hierarchies.
+    /// Composite lets clients treat individual objects and compositions of objects uniformly.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)

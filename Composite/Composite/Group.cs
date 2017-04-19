@@ -3,7 +3,10 @@ using System.Linq;
 
 namespace Composite
 {
-    public class Group : IParty
+    /// <summary>
+    /// The 'Composite' class
+    /// </summary>
+    public sealed class Group : IParty
     {
         public Group()
         {
