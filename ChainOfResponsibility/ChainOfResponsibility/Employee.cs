@@ -1,6 +1,6 @@
 ﻿namespace ChainOfResponsibility
 {
-    public class Employee : IExpenseApprover
+    public sealed class Employee : IExpenseApprover
     {
         private readonly decimal approvalLimit;
 

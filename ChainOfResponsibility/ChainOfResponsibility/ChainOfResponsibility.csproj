@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="ApprovalResponse.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="EndOfChain.cs" />
+    <Compile Include="EndOfChainHandler.cs" />
     <Compile Include="ExpenseHandler.cs" />
     <Compile Include="IExpenseHandler.cs" />
     <Compile Include="IExpenseReport.cs" />
@@ -51,6 +51,9 @@
     <Compile Include="ExpenseReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

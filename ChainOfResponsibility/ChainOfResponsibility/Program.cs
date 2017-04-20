@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace ChainOfResponsibility
 {
+    /// <summary>
+    /// Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+    /// Chain the receiving objects and pass the request along the chain until an object handles it.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
@@ -55,7 +59,7 @@ namespace ChainOfResponsibility
             // CoR implementation
             Console.WriteLine("Chain of Responsibility");
 
-            var report = new ExpenseReport(20000);
+            var report = new ExpenseReport(2000m);
             var eh1 = new ExpenseHandler(new Employee("Pylyp", 0m));
             var eh2 = new ExpenseHandler(new Employee("Hasham", 100m));
             var eh3 = new ExpenseHandler(new Employee("Annalisa", 1000m));
@@ -68,7 +72,6 @@ namespace ChainOfResponsibility
             var response = eh1.Approve(report);
 
             Console.WriteLine("Response {0}", response);
-
         }
     }
 }

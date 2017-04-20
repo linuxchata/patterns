@@ -2,7 +2,10 @@
 
 namespace ChainOfResponsibility
 {
-    public class ExpenseHandler : IExpenseHandler
+    /// <summary>
+    /// The 'ConcreteHandler' class
+    /// </summary>
+    public sealed class ExpenseHandler : IExpenseHandler
     {
         private readonly IExpenseApprover approver;
 
@@ -11,7 +14,7 @@ namespace ChainOfResponsibility
         public ExpenseHandler(IExpenseApprover approver)
         {
             this.approver = approver;
-            this.nextApprover = new EndOfChain();
+            this.nextApprover = new EndOfChainHandler();
         }
 
         public ApprovalResponse Approve(IExpenseReport report)

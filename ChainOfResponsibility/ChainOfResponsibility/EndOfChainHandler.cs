@@ -2,7 +2,10 @@
 
 namespace ChainOfResponsibility
 {
-    public class EndOfChain : IExpenseHandler
+    /// <summary>
+    /// The 'ConcreteHandler' class
+    /// </summary>
+    public sealed class EndOfChainHandler : IExpenseHandler
     {
         public ApprovalResponse Approve(IExpenseReport report)
         {
