@@ -7,7 +7,7 @@ namespace Interpreter
     /// <summary>
     /// Cient class
     /// </summary>
-    public class Sandwich : IExpression
+    public sealed class Sandwich : IExpression
     {
         private readonly Bread topBread;
         private readonly Ingredients ingredients;

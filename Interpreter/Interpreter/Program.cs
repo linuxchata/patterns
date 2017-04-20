@@ -15,7 +15,7 @@ namespace Interpreter
         {
             var context = new Context();
 
-            var ingredients = new List<Ingredient> { new Avocado(), new Tomato(), new Avocado() };
+            var ingredients = new List<IExpression> { new Avocado(), new Tomato(), new Avocado() };
             var topBread = new WheatBread();
             var bottomBread = new WhiteBread();
             var sandwich = new Sandwich(topBread, new Ingredients(ingredients), bottomBread);
