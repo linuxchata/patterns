@@ -2,16 +2,18 @@
 
 namespace Command2
 {
-    // Receiver class
-    public class StockTrade
+    /// <summary>
+    /// Receiver class
+    /// </summary>
+    public sealed class StockTrade
     {
         public void Buy()
         {
-            Console.WriteLine("You want to buy stocks");
+            Console.Write("buy stocks");
         }
         public void Sell()
         {
-            Console.WriteLine("You want to sell stocks ");
+            Console.Write("sell stocks");
         }
     }
 }

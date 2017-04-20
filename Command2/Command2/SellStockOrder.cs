@@ -1,7 +1,9 @@
 ﻿namespace Command2
 {
-    // ConcreteCommand Class
-    public class SellStockOrder : IOrder
+    /// <summary>
+    /// ConcreteCommand Class
+    /// </summary>
+    public sealed class SellStockOrder : IOrder
     {
         private readonly StockTrade stock;
 

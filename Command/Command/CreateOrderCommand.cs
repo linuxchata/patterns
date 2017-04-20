@@ -2,11 +2,14 @@
 
 namespace Command
 {
+    /// <summary>
+    /// The 'ConcreteCommand' class
+    /// </summary>
     public class CreateOrderCommand : ICommand, ICommandFactory
     {
         public void Execute()
         {
-            Console.WriteLine("Order was create");
+            Console.WriteLine("Order was created");
         }
 
         public string CommandName

@@ -2,16 +2,20 @@
 
 namespace Command2
 {
-    class Program
+    /// <summary>
+    /// Encapsulate a request as an object, thereby letting you parameterize clients
+    /// with different requests, queue or log requests, and support undoable operations.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var stock = new StockTrade();
 
             var buyStockOrder = new BuyStockOrder(stock);
             var sellStockOrder = new SellStockOrder(stock);
 
-            var agent = new Agent();
+            var agent = new Agent("Patrik Bank");
             agent.PlaceOrder(buyStockOrder); // Buy Shares
             agent.PlaceOrder(sellStockOrder); // Sell Shares
 

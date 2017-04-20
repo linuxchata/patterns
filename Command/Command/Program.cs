@@ -3,21 +3,20 @@ using System.Collections.Generic;
 
 namespace Command
 {
+    /// <summary>
+    /// Encapsulate a request as an object, thereby letting you parameterize clients
+    /// with different requests, queue or log requests, and support undoable operations.
+    /// </summary>
     public class Program
     {
         public static void Main()
         {
             var availableCommands = GetAvailableCommands();
 
+            PrintUsage(availableCommands);
+
+            Console.WriteLine();
             var input = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(input))
-            {
-                PrintUsage(availableCommands);
-                Console.ReadKey();
-                return;
-            }
-
             var args = input.Split(' ');
 
             var commandParser = new CommandParser(availableCommands);

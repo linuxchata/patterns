@@ -2,6 +2,9 @@
 
 namespace Command
 {
+    /// <summary>
+    /// The 'ConcreteCommand' class
+    /// </summary>
     public class UpdateQuantityCommand : ICommand, ICommandFactory
     {
         public int NewQuantity { get; set; }
@@ -9,7 +12,7 @@ namespace Command
         public void Execute()
         {
             const int OldQuantity = 5;
-            Console.WriteLine("Database was updates from {0} to {1} value for quantity", OldQuantity, this.NewQuantity);
+            Console.WriteLine("Database was updated from {0} to {1} value for quantity", OldQuantity, this.NewQuantity);
         }
 
         public string CommandName

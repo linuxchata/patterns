@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Command
 {
+    /// <summary>
+    /// The 'Invoker' class
+    /// </summary>
     public class CommandParser
     {
         private readonly IEnumerable<ICommandFactory> availableCommands;

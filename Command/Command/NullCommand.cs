@@ -2,6 +2,9 @@
 
 namespace Command
 {
+    /// <summary>
+    /// The 'ConcreteCommand' class
+    /// </summary>
     public class NullCommand : ICommand, ICommandFactory
     {
         public void Execute()
