@@ -3,7 +3,7 @@
     /// <summary>
     /// A 'ConcreteColleague' class
     /// </summary>
-    public class Airbus321 : Aircraft
+    public sealed class Airbus321 : Aircraft
     {
         public Airbus321(string callSign, IAirTraficControl atc)
             : base(callSign, atc)

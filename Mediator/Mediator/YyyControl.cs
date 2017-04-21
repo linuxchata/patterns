@@ -7,7 +7,7 @@ namespace Mediator
     /// <summary>
     /// The 'ConcreteMediator' class
     /// </summary>
-    public class YyyControl : IAirTraficControl
+    public sealed class YyyControl : IAirTraficControl
     {
         private readonly HashSet<Aircraft> aircraftUnderGuidence;
 
@@ -22,7 +22,7 @@ namespace Mediator
             {
                 if (Math.Abs(currentAircraft.Altitude - aircraft.Altitude) < 500)
                 {
-                    aircraft.Climd(1000);
+                    aircraft.Climb(1000);
                 }
             }
         }

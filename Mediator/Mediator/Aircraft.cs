@@ -39,7 +39,7 @@ namespace Mediator
 
         public abstract int Ceiling { get; }
 
-        public void Climd(int climb)
+        public void Climb(int climb)
         {
             this.Altitude += climb;
         }
