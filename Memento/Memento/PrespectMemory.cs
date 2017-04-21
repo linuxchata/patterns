@@ -5,7 +5,7 @@ namespace Memento
     /// <summary>
     /// The 'Caretaker' class
     /// </summary>
-    public class PrespectMemory
+    public sealed class PrespectMemory
     {
         private readonly Stack<Memento> mementoes;
 

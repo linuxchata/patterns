@@ -3,7 +3,7 @@
     /// <summary>
     /// The 'Memento' class
     /// </summary>
-    public class Memento
+    public sealed class Memento
     {
         public Memento(string name, string phone, decimal budget)
         {

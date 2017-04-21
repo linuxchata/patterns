@@ -5,7 +5,7 @@ namespace Memento
     /// <summary>
     /// The 'Originator' class
     /// </summary>
-    public class SalesProstect
+    public sealed class SalesProspect
     {
         public string Name { get; set; }
 
