@@ -25,8 +25,8 @@ namespace Iterator
 
         public IEnumerator<T> GetEnumerator()
         {
-            //return new TreeIterator<T>(this);
-            return new AnotherTreeIterator<T>(this);
+            return new TreeIterator<T>(this);
+            //return new AnotherTreeIterator<T>(this);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()

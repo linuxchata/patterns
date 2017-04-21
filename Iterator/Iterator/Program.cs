@@ -2,6 +2,10 @@
 
 namespace Iterator
 {
+    /// <summary>
+    /// Provide a way to access the elements of an aggregate object
+    /// sequentially without exposing its underlying representation.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
@@ -26,6 +30,7 @@ namespace Iterator
 
             var list = tree.ToList();
 
+            Console.WriteLine("Non iterator tree");
             Console.WriteLine(string.Join(" ", list));
 
             var tree2 = new TreeWithIterator<string>("0")
@@ -46,18 +51,25 @@ namespace Iterator
                 }
             };
 
+            Console.WriteLine();
+            Console.WriteLine("Iterator tree");
+
             foreach (var item in tree2)
             {
                 Console.Write(item + " ");
             }
 
             Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Direct root children");
 
             foreach (var item in tree2.GetChildren())
             {
                 Console.Write(item + " ");
             }
 
+            Console.WriteLine();
             Console.ReadKey();
         }
     }

@@ -5,7 +5,6 @@ namespace Iterator
     /// <summary>
     /// The 'ConcreteIterator' class
     /// </summary>
-    /// <typeparam name="T"></typeparam>
     public class TreeIterator<T> : IEnumerator<T>
     {
         private TreeWithIterator<T> current;
