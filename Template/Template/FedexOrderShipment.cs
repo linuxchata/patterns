@@ -5,7 +5,7 @@ namespace Template
     /// <summary>
     /// A 'ConcreteClass' class
     /// </summary>
-    public class FedexOrderShipment : OrderShipment
+    public sealed class FedexOrderShipment : OrderShipment
     {
         public FedexOrderShipment(string address)
         {

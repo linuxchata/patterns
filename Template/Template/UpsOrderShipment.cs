@@ -5,7 +5,7 @@ namespace Template
     /// <summary>
     /// A 'ConcreteClass' class
     /// </summary>
-    public class UpsOrderShipment : OrderShipment
+    public sealed class UpsOrderShipment : OrderShipment
     {
         public UpsOrderShipment(string address)
         {
