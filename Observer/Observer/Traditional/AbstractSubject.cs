@@ -5,7 +5,7 @@ namespace Observer.Traditional
     /// <summary>
     /// The 'Subject' abstract class
     /// </summary>
-    public class AbstractSubject
+    public abstract class AbstractSubject
     {
         private readonly List<AbstractObserver> observers = new List<AbstractObserver>();
 

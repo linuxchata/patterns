@@ -53,7 +53,7 @@
     <Compile Include="Traditional\GoogleObserver.cs" />
     <Compile Include="Traditional\MicrosoftObserver.cs" />
     <Compile Include="SampleData.cs" />
-    <Compile Include="Traditional\StockTicker.cs" />
+    <Compile Include="Traditional\StockTickerSubject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Traditional\ClassDiagram.cd" />

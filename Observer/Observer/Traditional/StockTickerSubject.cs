@@ -3,7 +3,7 @@
     /// <summary>
     /// The 'ConcreteSubject' class
     /// </summary>
-    public class StockTicker : AbstractSubject
+    public sealed class StockTickerSubject : AbstractSubject
     {
         private Stock stock;
 

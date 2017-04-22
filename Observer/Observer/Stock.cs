@@ -1,6 +1,6 @@
 ﻿namespace Observer
 {
-    public class Stock
+    public sealed class Stock
     {
         public string Name { get; set; }
 

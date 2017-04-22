@@ -5,11 +5,11 @@ namespace Observer.Traditional
     /// <summary>
     /// The 'ConcreteObserver' class
     /// </summary>
-    public class GoogleObserver : AbstractObserver
+    public sealed class GoogleObserver : AbstractObserver
     {
-        private readonly StockTicker subject;
+        private readonly StockTickerSubject subject;
 
-        public GoogleObserver(StockTicker subject)
+        public GoogleObserver(StockTickerSubject subject)
         {
             this.subject = subject;
             subject.Register(this);

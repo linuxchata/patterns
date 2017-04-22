@@ -1,7 +1,7 @@
 ﻿using System;
 using Observer.Events;
 using Observer.Traditional;
-using StockTicker = Observer.Traditional.StockTicker;
+using StockTicker = Observer.Traditional.StockTickerSubject;
 
 namespace Observer
 {

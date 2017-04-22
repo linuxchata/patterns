@@ -5,11 +5,11 @@ namespace Observer.Traditional
     /// <summary>
     /// The 'ConcreteObserver' class
     /// </summary>
-    public class MicrosoftObserver : AbstractObserver
+    public sealed class MicrosoftObserver : AbstractObserver
     {
-        private readonly StockTicker subject;
+        private readonly StockTickerSubject subject;
 
-        public MicrosoftObserver(StockTicker subject)
+        public MicrosoftObserver(StockTickerSubject subject)
         {
             this.subject = subject;
             subject.Register(this);
