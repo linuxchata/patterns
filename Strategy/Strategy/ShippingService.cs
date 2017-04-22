@@ -3,7 +3,7 @@
     /// <summary>
     /// The 'Context' class
     /// </summary>
-    public class ShippingService
+    public sealed class ShippingService
     {
         private readonly IShippingStrategy strategy;
 

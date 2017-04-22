@@ -3,7 +3,7 @@
     /// <summary>
     /// A 'ConcreteStrategy' class
     /// </summary>
-    public class UpsShippingStrategy : IShippingStrategy
+    public sealed class UpsShippingStrategy : IShippingStrategy
     {
         public UpsShippingStrategy()
         {

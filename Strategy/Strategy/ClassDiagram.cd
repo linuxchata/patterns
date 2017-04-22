@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Strategy.DhlShippingStrategy" BaseTypeListCollapsed="true">
-    <Position X="3" Y="2.5" Width="1.75" />
+    <Position X="3.5" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DhlShippingStrategy.cs</FileName>
@@ -14,9 +14,12 @@
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ShippingService.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="strategy" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Strategy.UpsShippingStrategy" BaseTypeListCollapsed="true">
-    <Position X="5.25" Y="2.5" Width="1.75" />
+    <Position X="6.25" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UpsShippingStrategy.cs</FileName>
@@ -24,7 +27,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Strategy.IShippingStrategy">
-    <Position X="3" Y="0.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IShippingStrategy.cs</FileName>
