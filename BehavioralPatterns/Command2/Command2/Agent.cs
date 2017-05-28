@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace Command2
 {
@@ -8,11 +8,12 @@ namespace Command2
     /// </summary>
     public sealed class Agent
     {
-        private readonly ArrayList ordersQueue = new ArrayList();
+        private List<IOrder> ordersQueue;
 
         public Agent(string name)
         {
             this.Name = name;
+            this.ordersQueue = new List<IOrder>();
         }
 
         public string Name { get; private set; }

@@ -11,6 +11,7 @@ namespace Command2
         {
             Console.Write("buy stocks");
         }
+
         public void Sell()
         {
             Console.Write("sell stocks");
