@@ -12,9 +12,9 @@ namespace Template
             this.Address = address;
         }
 
-        protected override void GetShppingLabelFromCarrier()
+        protected override void GetShippingLabelFromCarrier()
         {
-            this.Label = string.Format("UPS:[{0}]", this.Address);
+            this.Label = $"UPS:[{this.Address}]";
             Console.WriteLine("--> Label has been defined");
         }
     }

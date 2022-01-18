@@ -7,9 +7,9 @@ namespace Template
     /// </summary>
     public abstract class OrderShipment
     {
-        public string Address { get; set; }
+        protected string Address { get; set; }
 
-        public string Label { get; set; }
+        protected string Label { get; set; }
 
         /// <summary>
         /// The "Template method"
@@ -17,7 +17,7 @@ namespace Template
         public void Ship()
         {
             this.VerifyShippingData();
-            this.GetShppingLabelFromCarrier();
+            this.GetShippingLabelFromCarrier();
             this.PrintLabel();
         }
 
@@ -25,18 +25,19 @@ namespace Template
         {
             if (string.IsNullOrEmpty(this.Address))
             {
-                throw new ArgumentNullException("Address", "Address cannot be null");
+                throw new ArgumentNullException(nameof(this.Address), "Address cannot be null");
             }
 
+            Console.WriteLine($"--> Address is {this.Address}");
             Console.WriteLine("--> Address has been verified");
         }
 
-        protected abstract void GetShppingLabelFromCarrier();
+        protected abstract void GetShippingLabelFromCarrier();
 
         protected virtual void PrintLabel()
         {
-            Console.WriteLine(this.Label);
-            Console.WriteLine("--> Label has been print");
+            Console.WriteLine($"--> Label is {this.Label}");
+            Console.WriteLine("--> Label has been printed");
         }
     }
 }
