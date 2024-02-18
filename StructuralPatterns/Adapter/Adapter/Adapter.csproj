@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Adapter</RootNamespace>
     <AssemblyName>Adapter</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,26 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataPatterRendererAdapter.cs" />
-    <Compile Include="DataRenderer.cs" />
-    <Compile Include="IDataPatterRendererAdapter.cs" />
-    <Compile Include="Pattern.cs" />
-    <Compile Include="PatternRenderer.cs" />
+    <Compile Include="ClassAdapter\IAudioPlayer.cs" />
+    <Compile Include="ClassAdapter\SoundPlayerClassAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectAdapter\IAudioPlayer.cs" />
+    <Compile Include="ObjectAdapter\SoundPlayerObjectAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleAdapter\Adaptee.cs" />
     <Compile Include="SimpleAdapter\Adapter.cs" />
     <Compile Include="SimpleAdapter\Target.cs" />
-    <Compile Include="StubAdapter.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="db.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleAdapter\ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

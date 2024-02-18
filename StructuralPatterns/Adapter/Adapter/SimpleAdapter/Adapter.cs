@@ -5,16 +5,16 @@
     /// </summary>
     public class Adapter : Target
     {
-        private readonly Adaptee adaptee;
+        private readonly Adaptee _adaptee;
 
         public Adapter(Adaptee adaptee)
         {
-            this.adaptee = adaptee;
+            _adaptee = adaptee;
         }
 
         public override void Request()
         {
-            this.adaptee.SpecificRequest();
+            _adaptee.SpecificRequest();
         }
     }
 }
