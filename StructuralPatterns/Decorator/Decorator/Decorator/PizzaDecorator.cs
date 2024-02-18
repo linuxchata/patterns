@@ -11,25 +11,25 @@ namespace Decorator.Decorator
 
         protected PizzaDecorator(Pizza pizza)
         {
-            this.Pizza = pizza;
+            Pizza = pizza;
         }
 
         public override string Description
         {
             get
             {
-                return this.Pizza.Description;
+                return Pizza.Description;
             }
         }
 
         public override string GetDescription()
         {
-            return this.Description;
+            return Description;
         }
 
         public override decimal CalculateCost()
         {
-            return this.Pizza.CalculateCost();
+            return Pizza.CalculateCost();
         }
     }
 }

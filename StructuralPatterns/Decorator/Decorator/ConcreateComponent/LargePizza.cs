@@ -17,7 +17,7 @@ namespace Decorator.ConcreateComponent
 
         public override string GetDescription()
         {
-            return this.Description;
+            return Description;
         }
 
         public override decimal CalculateCost()

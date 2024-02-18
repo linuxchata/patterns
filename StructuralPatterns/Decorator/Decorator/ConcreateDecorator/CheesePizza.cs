@@ -23,7 +23,7 @@ namespace Decorator.ConcreateDecorator
 
         public override string GetDescription()
         {
-            return string.Format("{0}, {1}", base.Pizza.GetDescription(), this.Description);
+            return string.Format("{0}, {1}", base.Pizza.GetDescription(), Description);
         }
 
         public override decimal CalculateCost()
