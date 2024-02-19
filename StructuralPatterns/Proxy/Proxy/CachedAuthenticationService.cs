@@ -8,28 +8,28 @@ namespace Proxy
     /// </summary>
     public class CachedAuthenticationService : IAuthenticationService
     {
-        private readonly AuthenticationService authenticationService;
+        private readonly AuthenticationService _authenticationService;
 
-        private readonly Dictionary<string, bool> cache;
+        private readonly Dictionary<string, bool> _cache;
 
         public CachedAuthenticationService()
         {
-            this.authenticationService = new AuthenticationService();
-            this.cache = new Dictionary<string, bool>();
+            _authenticationService = new AuthenticationService();
+            _cache = new Dictionary<string, bool>();
         }
 
         public bool IsAuthenticated(string userName)
         {
-            if (cache.ContainsKey(userName))
+            if (_cache.ContainsKey(userName))
             {
-                Console.WriteLine("Get cached value for IsAuthenticated user {0}.", userName);
-                return this.cache[userName];
+                Console.WriteLine("Get cached value for IsAuthenticated for the user {0}.", userName);
+                return _cache[userName];
             }
 
-            var result = this.authenticationService.IsAuthenticated(userName);
+            var result = _authenticationService.IsAuthenticated(userName);
 
-            this.cache.Add(userName, result);
-            Console.WriteLine("IsAuthenticated result was added to the cache for user {0}.", userName);
+            _cache.Add(userName, result);
+            Console.WriteLine("IsAuthenticated result was added to the cache for the user {0}.", userName);
 
             return result;
         }

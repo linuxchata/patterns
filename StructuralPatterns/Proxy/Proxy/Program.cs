@@ -11,13 +11,13 @@ namespace Proxy
         {
             var authenticationService = new CachedAuthenticationService();
             authenticationService.IsAuthenticated("John Oliver");
-            authenticationService.IsAuthenticated("Kazil Prokop");
-            authenticationService.IsAuthenticated("Kazil Prokop");
-            authenticationService.IsAuthenticated("Kazil Prokop");
-            authenticationService.IsAuthenticated("Kazil Prokop");
-            authenticationService.IsAuthenticated("Kazil Prokop");
+            authenticationService.IsAuthenticated("Samantha Williams");
+            authenticationService.IsAuthenticated("Samantha Williams");
+            authenticationService.IsAuthenticated("Samantha Williams");
+            authenticationService.IsAuthenticated("Samantha Williams");
+            authenticationService.IsAuthenticated("Samantha Williams");
             authenticationService.IsAuthenticated("John Oliver");
-            authenticationService.IsAuthenticated("Fernando Alonso");
+            authenticationService.IsAuthenticated("Adam Smith");
 
             Console.ReadKey();
         }
