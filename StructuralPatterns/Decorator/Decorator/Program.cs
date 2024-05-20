@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.IO.Compression;
 using Decorator.Component;
 using Decorator.ConcreateComponent;
 using Decorator.ConcreateDecorator;
-using System.IO.Compression;
-using System.Runtime.InteropServices;
 
 namespace Decorator
 {
