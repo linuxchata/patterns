@@ -20,9 +20,9 @@ namespace Bridge
 
         public override void Print()
         {
-            Console.WriteLine(this.formatter.Format("Title", this.Title));
-            Console.WriteLine(this.formatter.Format("Author", this.Author));
-            Console.WriteLine(this.formatter.Format("Text", this.Text));
+            Console.WriteLine(_formatter.Format("Title", Title));
+            Console.WriteLine(_formatter.Format("Author", Author));
+            Console.WriteLine(_formatter.Format("Text", Text));
             Console.WriteLine();
         }
     }

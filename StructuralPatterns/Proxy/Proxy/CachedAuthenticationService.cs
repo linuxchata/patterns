@@ -6,7 +6,7 @@ namespace Proxy
     /// <summary>
     /// The 'Proxy' class
     /// </summary>
-    public class CachedAuthenticationService : IAuthenticationService
+    public sealed class CachedAuthenticationService : IAuthenticationService
     {
         private readonly AuthenticationService _authenticationService;
 

@@ -11,7 +11,7 @@ namespace Bridge
         public Faq(IFormatter formatter)
             : base(formatter)
         {
-            this.Questions = new Dictionary<string, string>();
+            Questions = new Dictionary<string, string>();
         }
 
         public string Title { get; set; }
@@ -20,10 +20,10 @@ namespace Bridge
 
         public override void Print()
         {
-            Console.WriteLine(this.formatter.Format("Title", this.Title));
-            foreach (var q in this.Questions)
+            Console.WriteLine(_formatter.Format("Title", Title));
+            foreach (var q in Questions)
             {
-                Console.WriteLine(this.formatter.Format(q.Key, q.Value));
+                Console.WriteLine(_formatter.Format(q.Key, q.Value));
             }
             Console.WriteLine();
         }

@@ -1,41 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Facade
 {
     public sealed class Facade
     {
-        private SubSystemOne systemOne;
+        private SubSystemOne _systemOne;
 
-        private SubSystemTwo systemTwo;
+        private SubSystemTwo _systemTwo;
 
-        private SubSystemThree systemThree;
+        private SubSystemThree _systemThree;
 
-        private SubSystemFour systemFour;
+        private SubSystemFour _systemFour;
 
         public Facade()
         {
-            this.systemOne = new SubSystemOne();
-            this.systemTwo = new SubSystemTwo();
-            this.systemThree = new SubSystemThree();
-            this.systemFour = new SubSystemFour();
+            _systemOne = new SubSystemOne();
+            _systemTwo = new SubSystemTwo();
+            _systemThree = new SubSystemThree();
+            _systemFour = new SubSystemFour();
         }
 
         public void MethodA()
         {
             Console.WriteLine("Method A on Facade");
-            this.systemOne.MethodOne();
-            this.systemTwo.MethodTwo();
+            _systemOne.MethodOne();
+            _systemTwo.MethodTwo();
             Console.WriteLine();
         }
 
         public void MethodB()
         {
             Console.WriteLine("Method B on Facade");
-            this.systemThree.MethodThree();
-            this.systemFour.MethodFour();
+            _systemThree.MethodThree();
+            _systemFour.MethodFour();
             Console.WriteLine();
         }
     }

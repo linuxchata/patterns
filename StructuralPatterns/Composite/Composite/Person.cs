@@ -13,7 +13,7 @@ namespace Composite
 
         public void Stats()
         {
-            Console.WriteLine("{0} has {1} peaces of GOLD", this.Name, this.Gold);
+            Console.WriteLine("{0} has {1} peaces of GOLD", Name, Gold);
         }
     }
 }

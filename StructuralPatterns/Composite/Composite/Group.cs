@@ -10,7 +10,7 @@ namespace Composite
     {
         public Group()
         {
-            this.Members = new List<IParty>();
+            Members = new List<IParty>();
         }
 
         public string Name { get; set; }
@@ -19,13 +19,13 @@ namespace Composite
         {
             get
             {
-                return this.Members.Sum(member => member.Gold);
+                return Members.Sum(member => member.Gold);
             }
             set
             {
-                var totalSplit = value / this.Members.Count;
-                var leftOver = value % this.Members.Count;
-                foreach (var member in this.Members)
+                var totalSplit = value / Members.Count;
+                var leftOver = value % Members.Count;
+                foreach (var member in Members)
                 {
                     member.Gold += totalSplit + leftOver;
                     leftOver = 0;
@@ -37,7 +37,7 @@ namespace Composite
 
         public void Stats()
         {
-            foreach (var member in this.Members)
+            foreach (var member in Members)
             {
                 member.Stats();
             }
