@@ -49,6 +49,21 @@ namespace Singleton
                 });
             Console.WriteLine();
 
+            Console.WriteLine("Lazy Singleton2");
+            Parallel.For(
+                0,
+                25,
+                new ParallelOptions
+                {
+                    MaxDegreeOfParallelism = 25
+                },
+                i =>
+                {
+                    var singletonLazy = SingletonLazy2.GetInstance();
+                    Console.WriteLine(singletonLazy.GetHashCode());
+                });
+            Console.WriteLine();
+
             Console.ReadKey();
         }
     }

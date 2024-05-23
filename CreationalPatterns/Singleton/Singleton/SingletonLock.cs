@@ -14,15 +14,18 @@
         {
             get
             {
-                lock (Sync)
+                if (instance is null)
                 {
-                    if (instance == null)
+                    lock (Sync)
                     {
-                        instance = new SingletonLock();
+                        if (instance is null)
+                        {
+                            instance = new SingletonLock();
+                        }
                     }
-
-                    return instance;
                 }
+
+                return instance;
             }
         }
     }
