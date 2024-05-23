@@ -3,9 +3,9 @@
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    public class MiniCooperFactory : IAutoFactory
+    public sealed class MiniCooperFactory : IAutoFactory
     {
-        public IAuto CreateAutomobile()
+        public IAuto CreateAuto()
         {
             return new MiniCooper();
         }

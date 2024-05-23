@@ -3,10 +3,10 @@
     /// <summary>
     /// The 'AbstractFactory' interface
     /// </summary>
-    public interface IAbstractFactory
+    public interface IAbstractAutoFactory
     {
-        IAuto CreateEconomyCar();
+        IAuto CreateEconomyAuto();
 
-        IAuto CreateSportCar();
+        IAuto CreateSportAuto();
     }
 }

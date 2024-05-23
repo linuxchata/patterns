@@ -1,18 +1,16 @@
-﻿using System;
-
-namespace Factory.AbstractFactory
+﻿namespace Factory.AbstractFactory
 {
     /// <summary>
     /// The 'ConcreteFactory' class
     /// </summary>
-    public class BmwAbstractFactory : IAbstractFactory
+    public sealed class BmwAbstractAutoFactory : IAbstractAutoFactory
     {
-        public IAuto CreateEconomyCar()
+        public IAuto CreateEconomyAuto()
         {
             return new Bmw();
         }
 
-        public IAuto CreateSportCar()
+        public IAuto CreateSportAuto()
         {
             return new BmwI7();
         }

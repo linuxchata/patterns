@@ -14,7 +14,7 @@ namespace Factory
 
         public void TurnOff()
         {
-            Console.WriteLine("Stop Mini Cooper");
+            Console.WriteLine("Stopping Mini Cooper");
         }
     }
 }

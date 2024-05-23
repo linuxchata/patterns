@@ -45,9 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractFactory\MiniCooperAbstractFactory.cs" />
-    <Compile Include="AbstractFactory\BmwAbstractFactory.cs" />
-    <Compile Include="AbstractFactory\IAbstractFactory.cs" />
+    <Compile Include="AbstractFactory\MiniCooperAbstractAutoFactory.cs" />
+    <Compile Include="AbstractFactory\BmwAbstractAutoFactory.cs" />
+    <Compile Include="AbstractFactory\IAbstractAutoFactory.cs" />
     <Compile Include="BmwI7.cs" />
     <Compile Include="FactoryMethod\BmwFactory.cs" />
     <Compile Include="FactoryMethod\MiniCooperFactory.cs" />

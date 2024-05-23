@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Factory
 {
-    public class SimpleAutoFactory
+    public sealed class SimpleAutoFactory
     {
         private readonly Dictionary<string, Type> autos = new Dictionary<string, Type>
         {
@@ -13,9 +13,9 @@ namespace Factory
 
         public IAuto CreateAuto(string name)
         {
-            var car = autos[name];
+            var auto = autos[name];
 
-            return Activator.CreateInstance(car) as IAuto;
+            return Activator.CreateInstance(auto) as IAuto;
         }
     }
 }

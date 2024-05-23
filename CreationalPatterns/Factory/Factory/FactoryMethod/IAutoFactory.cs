@@ -5,6 +5,6 @@
     /// </summary>
     public interface IAutoFactory
     {
-        IAuto CreateAutomobile();
+        IAuto CreateAuto();
     }
 }

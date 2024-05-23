@@ -3,14 +3,14 @@
     /// <summary>
     /// The 'ConcreteFactory' class
     /// </summary>
-    public class MiniCooperAbstractFactory : IAbstractFactory
+    public sealed class MiniCooperAbstractAutoFactory : IAbstractAutoFactory
     {
-        public IAuto CreateEconomyCar()
+        public IAuto CreateEconomyAuto()
         {
             return new MiniCooper();
         }
 
-        public IAuto CreateSportCar()
+        public IAuto CreateSportAuto()
         {
             return new MiniCooperSport();
         }

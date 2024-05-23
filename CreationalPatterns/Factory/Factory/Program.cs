@@ -16,47 +16,51 @@ namespace Factory
         /// </summary>
         public static void Main(string[] args)
         {
-            var carName = "minicooper";
+            var autoName = "minicooper";
 
+            // No factory
             Print("No factory");
 
-            var auto = GetAuto(carName);
+            var auto = GetAuto(autoName);
             auto.TurnOn();
             auto.TurnOff();
 
+            // Simple Factory
             Console.WriteLine();
             Print("Simple Factory");
 
             var factory = new SimpleAutoFactory();
-            var auto2 = factory.CreateAuto(carName);
+            var auto2 = factory.CreateAuto(autoName);
             auto2.TurnOn();
             auto2.TurnOff();
 
+            // Factory Method
             Console.WriteLine();
             Print("Factory Method");
 
-            var autoFactory = LoadFactory();
-            var auto3 = autoFactory.CreateAutomobile();
+            var autoFactory = LoadAutoFactory();
+            var auto3 = autoFactory.CreateAuto();
             auto3.TurnOn();
             auto3.TurnOff();
 
+            // Abstract Factory
             Console.WriteLine();
             Print("Abstract Factory");
 
-            var abstractFactory = LoadAbstractFactory();
-            var auto4 = abstractFactory.CreateEconomyCar();
+            var abstractAutoFactory = LoadAbstractAutoFactory();
+            var auto4 = abstractAutoFactory.CreateEconomyAuto();
             auto4.TurnOn();
             auto4.TurnOff();
-            var auto5 = abstractFactory.CreateSportCar();
+            var auto5 = abstractAutoFactory.CreateSportAuto();
             auto5.TurnOn();
             auto5.TurnOff();
 
             Console.ReadKey();
         }
 
-        private static IAuto GetAuto(string car)
+        private static IAuto GetAuto(string autoName)
         {
-            switch (car)
+            switch (autoName)
             {
                 case "bmw":
                     return new Bmw();
@@ -67,16 +71,16 @@ namespace Factory
             }
         }
 
-        private static IAutoFactory LoadFactory()
+        private static IAutoFactory LoadAutoFactory()
         {
-            var autoFactory = System.Configuration.ConfigurationManager.AppSettings["Auto"];
+            var autoFactory = System.Configuration.ConfigurationManager.AppSettings["AutoFactory"];
             return Assembly.GetExecutingAssembly().CreateInstance(autoFactory) as IAutoFactory;
         }
 
-        private static IAbstractFactory LoadAbstractFactory()
+        private static IAbstractAutoFactory LoadAbstractAutoFactory()
         {
-            var car = System.Configuration.ConfigurationManager.AppSettings["AutoAbstract"];
-            return Assembly.GetExecutingAssembly().CreateInstance(car) as IAbstractFactory;
+            var abstractAutoFactory = System.Configuration.ConfigurationManager.AppSettings["AutoAbstractFactory"];
+            return Assembly.GetExecutingAssembly().CreateInstance(abstractAutoFactory) as IAbstractAutoFactory;
         }
 
         private static void Print(string message)

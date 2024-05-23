@@ -14,7 +14,7 @@ namespace Factory
 
         public void TurnOff()
         {
-            Console.WriteLine("Stop BMWI7 Sport");
+            Console.WriteLine("Stopping BMWI7 Sport");
         }
     }
 }

@@ -3,9 +3,9 @@
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    public class BmwFactory : IAutoFactory
+    public sealed class BmwFactory : IAutoFactory
     {
-        public IAuto CreateAutomobile()
+        public IAuto CreateAuto()
         {
             return new Bmw();
         }

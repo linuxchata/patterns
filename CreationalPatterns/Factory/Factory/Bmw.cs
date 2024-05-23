@@ -14,7 +14,7 @@ namespace Factory
 
         public void TurnOff()
         {
-            Console.WriteLine("Stop BMW Economy");
+            Console.WriteLine("Stopping BMW Economy");
         }
     }
 }
