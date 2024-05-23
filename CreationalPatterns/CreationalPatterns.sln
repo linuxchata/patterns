@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monostate", "Monostate\Monostate.csproj", "{2A30D3C5-B26B-4679-83CD-64DBF4381705}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multiton", "Multiton\Multiton.csproj", "{2A6446F8-3241-4239-AC9F-21BCB5087636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2A30D3C5-B26B-4679-83CD-64DBF4381705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A30D3C5-B26B-4679-83CD-64DBF4381705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A30D3C5-B26B-4679-83CD-64DBF4381705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6446F8-3241-4239-AC9F-21BCB5087636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6446F8-3241-4239-AC9F-21BCB5087636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6446F8-3241-4239-AC9F-21BCB5087636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6446F8-3241-4239-AC9F-21BCB5087636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
