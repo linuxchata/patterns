@@ -9,12 +9,12 @@
 
         public Sandwich GetSandwich()
         {
-            return this.Sandwich;
+            return Sandwich;
         }
 
         public void Create()
         {
-            this.Sandwich = new Sandwich();
+            Sandwich = new Sandwich();
         }
 
         public abstract void PrepareBread();

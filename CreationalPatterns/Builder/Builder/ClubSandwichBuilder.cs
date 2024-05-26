@@ -7,13 +7,13 @@
     {
         public override void PrepareBread()
         {
-            this.Sandwich.BreadType = BreadType.Wheet;
-            this.Sandwich.IsToasted = false;
+            Sandwich.BreadType = BreadType.Wheet;
+            Sandwich.IsToasted = false;
         }
 
         public override void ApplyMeatAndCheese()
         {
-            this.Sandwich.CheeseType = CheeseType.Holland;
+            Sandwich.CheeseType = CheeseType.Holland;
         }
     }
 }

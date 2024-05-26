@@ -5,19 +5,19 @@
     /// </summary>
     public sealed class SandwichMaker
     {
-        private readonly Builder builder;
+        private readonly Builder _builder;
 
         public SandwichMaker(Builder builder)
         {
-            this.builder = builder;
+            _builder = builder;
         }
 
         public void CreateSandwich()
         {
-            this.builder.Create();
+            _builder.Create();
 
-            this.builder.PrepareBread();
-            this.builder.ApplyMeatAndCheese();
+            _builder.PrepareBread();
+            _builder.ApplyMeatAndCheese();
         }
     }
 }

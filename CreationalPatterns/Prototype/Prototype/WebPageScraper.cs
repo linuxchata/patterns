@@ -8,9 +8,9 @@ namespace Prototype
     /// </summary>
     public class WebPageScraper : ICloneable
     {
-        private string title;
+        private string _title;
 
-        private string body;
+        private string _body;
 
         public WebPageScraper(string url)
         {
@@ -21,19 +21,19 @@ namespace Prototype
 
         public void PrintData()
         {
-            Console.WriteLine("Title: {0}", this.title);
-            Console.WriteLine("Body: {0}", this.body);
+            Console.WriteLine("Title: {0}", _title);
+            Console.WriteLine("Body: {0}", _body);
         }
 
         private void Scrape(string page)
         {
-            this.title = "Fake Title";
-            this.body = "Fake Body";
+            _title = "Fake Title";
+            _body = "Fake Body";
         }
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            return MemberwiseClone();
         }
     }
 }
