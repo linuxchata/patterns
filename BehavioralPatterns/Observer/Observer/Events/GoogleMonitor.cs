@@ -13,8 +13,7 @@ namespace Observer.Events
         {
             if (string.Equals(e.Stock.Name, "GOOG"))
             {
-                Console.WriteLine("{0} stock is at {1}$.", e.Stock.Name,
-                    e.Stock.Price);
+                Console.WriteLine("{0} stock is at {1}$.", e.Stock.Name, e.Stock.Price);
             }
         }
     }

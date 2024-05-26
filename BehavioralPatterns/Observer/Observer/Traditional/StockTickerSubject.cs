@@ -5,18 +5,18 @@
     /// </summary>
     public sealed class StockTickerSubject : AbstractSubject
     {
-        private Stock stock;
+        private Stock _stock;
 
         public Stock Stock
         {
             get
             {
-                return this.stock;
+                return _stock;
             }
             set
             {
-                this.stock = value;
-                this.Notify();
+                _stock = value;
+                Notify();
             }
         }
     }

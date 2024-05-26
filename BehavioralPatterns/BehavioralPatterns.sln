@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator\Iterator.csproj", "{F81695B4-CC19-4548-95BC-38FDC79D66C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer\Observer.csproj", "{756238AA-A825-4A93-AF1F-9A1362A63FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81695B4-CC19-4548-95BC-38FDC79D66C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81695B4-CC19-4548-95BC-38FDC79D66C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81695B4-CC19-4548-95BC-38FDC79D66C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81695B4-CC19-4548-95BC-38FDC79D66C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756238AA-A825-4A93-AF1F-9A1362A63FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756238AA-A825-4A93-AF1F-9A1362A63FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756238AA-A825-4A93-AF1F-9A1362A63FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756238AA-A825-4A93-AF1F-9A1362A63FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6223457B-6BF4-438F-BD3F-7B8198CBA11D}
+	EndGlobalSection
+EndGlobal

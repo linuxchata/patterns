@@ -1,7 +1,6 @@
 ﻿using System;
 using Observer.Events;
 using Observer.Traditional;
-using StockTicker = Observer.Traditional.StockTickerSubject;
 
 namespace Observer
 {
@@ -15,18 +14,18 @@ namespace Observer
         {
             Console.WriteLine("Classic Observer");
 
-            var ticker = new StockTicker();
-            var google = new GoogleObserver(ticker);
-            var microsoft = new MicrosoftObserver(ticker);
+            var stockTickerSubject = new StockTickerSubject();
+            var google = new GoogleObserver(stockTickerSubject);
+            var microsoft = new MicrosoftObserver(stockTickerSubject);
             foreach (var item in SampleData.GetNext())
             {
-                ticker.Stock = item;
+                stockTickerSubject.Stock = item;
             }
 
             Console.WriteLine();
             Console.WriteLine("Event and Delegates");
 
-            var stockTicker = new Events.StockTicker();
+            var stockTicker = new StockTicker();
             var googleMonitor = new GoogleMonitor(stockTicker);
             var microsoftMonitor = new MicrosoftMonitor(stockTicker);
             foreach (var item in SampleData.GetNext())

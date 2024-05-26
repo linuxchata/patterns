@@ -4,7 +4,7 @@ namespace Observer.Events
 {
     public class StockTicker
     {
-        private Stock stock;
+        private Stock _stock;
 
         public event EventHandler<StockChangeEventArgs> StockChange;
 
@@ -12,12 +12,12 @@ namespace Observer.Events
         {
             get
             {
-                return this.stock;
+                return _stock;
             }
             set
             {
-                this.stock = value;
-                this.OnStockChanged();
+                _stock = value;
+                OnStockChanged();
             }
         }
 
@@ -25,7 +25,7 @@ namespace Observer.Events
         {
             if (StockChange != null)
             {
-                StockChange(this, new StockChangeEventArgs(this.stock));
+                StockChange(this, new StockChangeEventArgs(_stock));
             }
         }
     }

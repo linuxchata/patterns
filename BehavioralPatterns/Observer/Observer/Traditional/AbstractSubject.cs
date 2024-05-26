@@ -7,27 +7,27 @@ namespace Observer.Traditional
     /// </summary>
     public abstract class AbstractSubject
     {
-        private readonly List<AbstractObserver> observers = new List<AbstractObserver>();
+        private readonly List<AbstractObserver> _observers = new List<AbstractObserver>();
 
         public void Register(AbstractObserver observer)
         {
-            if (!this.observers.Contains(observer))
+            if (!_observers.Contains(observer))
             {
-                observers.Add(observer);
+                _observers.Add(observer);
             }
         }
 
         public void Unregister(AbstractObserver observer)
         {
-            if (this.observers.Contains(observer))
+            if (_observers.Contains(observer))
             {
-                observers.Remove(observer);
+                _observers.Remove(observer);
             }
         }
 
         public void Notify()
         {
-            foreach (var observer in this.observers)
+            foreach (var observer in _observers)
             {
                 observer.Update();
             }

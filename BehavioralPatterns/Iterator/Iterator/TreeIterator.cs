@@ -5,26 +5,51 @@ namespace Iterator
     /// <summary>
     /// The 'ConcreteIterator' class
     /// </summary>
-    public class TreeIterator<T> : IEnumerator<T>
+    public sealed class TreeIterator<T> : IEnumerator<T>
     {
-        private TreeWithIterator<T> current;
+        private TreeWithIterator<T> _current;
 
-        private readonly TreeWithIterator<T> tree;
+        private readonly TreeWithIterator<T> _tree;
 
-        private readonly Stack<TreeWithIterator<T>> crumb;
+        private readonly Stack<TreeWithIterator<T>> _crumb;
 
         public TreeIterator(TreeWithIterator<T> tree)
         {
-            this.tree = tree;
-            this.crumb = new Stack<TreeWithIterator<T>>();
+            _tree = tree;
+            _crumb = new Stack<TreeWithIterator<T>>();
         }
 
         public T Current
         {
             get
             {
-                return this.current.Value;
+                return _current.Value;
             }
+        }
+
+        public bool MoveNext()
+        {
+            if (_current == null)
+            {
+                Reset();
+                _current = _tree;
+                return true;
+            }
+            if (_current.LeftNode != null)
+            {
+                return TraverseLeft();
+            }
+            if (_current.RightNode != null)
+            {
+                return TraverseRight();
+            }
+
+            return TraverseUpAndRight();
+        }
+
+        public void Reset()
+        {
+            _current = null;
         }
 
         public void Dispose()
@@ -35,62 +60,37 @@ namespace Iterator
         {
             get
             {
-                return this.Current;
+                return Current;
             }
-        }
-
-        public bool MoveNext()
-        {
-            if (this.current == null)
-            {
-                Reset();
-                this.current = this.tree;
-                return true;
-            }
-            if (this.current.LeftNode != null)
-            {
-                return TraverseLeft();
-            }
-            if (this.current.RightNode != null)
-            {
-                return TraverseRight();
-            }
-
-            return TraverseUpAndRight();
         }
 
         private bool TraverseLeft()
         {
-            this.crumb.Push(this.current);
-            this.current = this.current.LeftNode;
+            _crumb.Push(_current);
+            _current = _current.LeftNode;
             return true;
         }
 
         private bool TraverseRight()
         {
-            this.crumb.Push(this.current);
-            this.current = this.current.RightNode;
+            _crumb.Push(_current);
+            _current = _current.RightNode;
             return true;
         }
 
         private bool TraverseUpAndRight()
         {
-            if (this.crumb.Count > 0)
+            if (_crumb.Count > 0)
             {
-                this.current = this.crumb.Pop();
-                if (this.current.RightNode != null)
+                _current = _crumb.Pop();
+                if (_current.RightNode != null)
                 {
-                    this.current = this.current.RightNode;
+                    _current = _current.RightNode;
                     return true;
                 }
             }
 
             return false;
-        }
-
-        public void Reset()
-        {
-            this.current = null;
         }
     }
 }

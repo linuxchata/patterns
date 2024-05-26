@@ -6,7 +6,7 @@ namespace Observer.Events
     {
         public StockChangeEventArgs(Stock stock)
         {
-            this.Stock = stock;
+            Stock = stock;
         }
 
         public Stock Stock { get; private set; }

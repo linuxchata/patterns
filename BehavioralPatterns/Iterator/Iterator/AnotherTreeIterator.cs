@@ -5,25 +5,25 @@ namespace Iterator
     /// <summary>
     /// The 'ConcreteIterator' class
     /// </summary>
-    public class AnotherTreeIterator<T> : IEnumerator<T>
+    public sealed class AnotherTreeIterator<T> : IEnumerator<T>
     {
-        private TreeWithIterator<T> current;
+        private TreeWithIterator<T> _current;
 
-        private readonly TreeWithIterator<T> tree;
+        private readonly TreeWithIterator<T> _tree;
 
-        private readonly Queue<IEnumerator<TreeWithIterator<T>>> queue;
+        private readonly Queue<IEnumerator<TreeWithIterator<T>>> _queue;
 
         public AnotherTreeIterator(TreeWithIterator<T> tree)
         {
-            this.tree = tree;
-            this.queue = new Queue<IEnumerator<TreeWithIterator<T>>>();
+            _tree = tree;
+            _queue = new Queue<IEnumerator<TreeWithIterator<T>>>();
         }
 
         public T Current
         {
             get
             {
-                return this.current.Value;
+                return _current.Value;
             }
         }
 
@@ -35,29 +35,29 @@ namespace Iterator
         {
             get
             {
-                return this.Current;
+                return Current;
             }
         }
 
         public bool MoveNext()
         {
-            if (this.current == null)
+            if (_current == null)
             {
-                this.Reset();
-                this.current = this.tree;
-                this.queue.Enqueue(this.current.GetChildren().GetEnumerator());
+                Reset();
+                _current = _tree;
+                _queue.Enqueue(_current.GetChildren().GetEnumerator());
                 return true;
             }
-            while (this.queue.Count > 0)
+            while (_queue.Count > 0)
             {
-                var enumerator = this.queue.Peek();
+                var enumerator = _queue.Peek();
                 if (enumerator.MoveNext())
                 {
-                    this.current = enumerator.Current;
-                    this.queue.Enqueue(this.current.GetChildren().GetEnumerator());
+                    _current = enumerator.Current;
+                    _queue.Enqueue(_current.GetChildren().GetEnumerator());
                     return true;
                 }
-                this.queue.Dequeue();
+                _queue.Dequeue();
             }
             return false;
         }

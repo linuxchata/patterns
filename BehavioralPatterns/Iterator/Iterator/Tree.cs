@@ -2,7 +2,7 @@
 
 namespace Iterator
 {
-    public class Tree<T>
+    public sealed class Tree<T>
     {
         public Tree()
         {
@@ -10,7 +10,7 @@ namespace Iterator
 
         public Tree(T value)
         {
-            this.Value = value;
+            Value = value;
         }
 
         public Tree<T> LeftNode { get; set; }
@@ -25,15 +25,15 @@ namespace Iterator
 
         public List<T> ToList()
         {
-            var result = new List<T> { this.Value };
+            var result = new List<T> { Value };
 
-            if (this.LeftNode != null)
+            if (LeftNode != null)
             {
-                result.AddRange(this.LeftNode.ToList());
+                result.AddRange(LeftNode.ToList());
             }
-            if (this.RightNode != null)
+            if (RightNode != null)
             {
-                result.AddRange(this.RightNode.ToList());
+                result.AddRange(RightNode.ToList());
             }
 
             return result;

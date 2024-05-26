@@ -7,19 +7,19 @@ namespace Observer.Traditional
     /// </summary>
     public sealed class GoogleObserver : AbstractObserver
     {
-        private readonly StockTickerSubject subject;
+        private readonly StockTickerSubject _subject;
 
         public GoogleObserver(StockTickerSubject subject)
         {
-            this.subject = subject;
+            _subject = subject;
             subject.Register(this);
         }
 
         public override void Update()
         {
-            if (subject.Stock.Name == "GOOG")
+            if (_subject.Stock.Name == "GOOG")
             {
-                Console.WriteLine("{0} stock are at {1}$", this.subject.Stock.Name, this.subject.Stock.Price);
+                Console.WriteLine("{0} stock are at {1}$", _subject.Stock.Name, _subject.Stock.Price);
             }
         }
     }

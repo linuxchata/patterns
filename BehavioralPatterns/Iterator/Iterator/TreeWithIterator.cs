@@ -2,7 +2,7 @@
 
 namespace Iterator
 {
-    public class TreeWithIterator<T> : IEnumerable<T>
+    public sealed class TreeWithIterator<T> : IEnumerable<T>
     {
         public TreeWithIterator()
         {
@@ -10,7 +10,7 @@ namespace Iterator
 
         public TreeWithIterator(T value)
         {
-            this.Value = value;
+            Value = value;
         }
 
         public TreeWithIterator<T> LeftNode { get; set; }
@@ -36,18 +36,18 @@ namespace Iterator
 
         public override string ToString()
         {
-            return this.Value.ToString();
+            return Value.ToString();
         }
 
         public IEnumerable<TreeWithIterator<T>> GetChildren()
         {
-            if (this.LeftNode != null)
+            if (LeftNode != null)
             {
-                yield return this.LeftNode;
+                yield return LeftNode;
             }
-            if (this.RightNode != null)
+            if (RightNode != null)
             {
-                yield return this.RightNode;
+                yield return RightNode;
             }
 
             yield break;
