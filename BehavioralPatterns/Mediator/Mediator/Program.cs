@@ -12,14 +12,14 @@ namespace Mediator
         public static void Main(string[] args)
         {
             var atc = new YyyControl();
-            var aircraft = new Airbus321("RN1", atc);
-            var aircraft2 = new Embraer190("RN2", atc);
-            var aircraft3 = new Boeing737("RN3", atc);
+            var airbus321 = new Airbus321("RN1", atc);
+            var embraer190 = new Embraer190("RN2", atc);
+            var boeing737 = new Boeing737("RN3", atc);
 
             Console.WriteLine();
 
-            aircraft.Altitude += 100;
-            aircraft2.Altitude += 200;
+            airbus321.Altitude += 100;
+            embraer190.Altitude += 200;
 
             Console.ReadKey();
         }

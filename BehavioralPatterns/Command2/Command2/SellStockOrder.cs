@@ -1,20 +1,20 @@
 ﻿namespace Command2
 {
     /// <summary>
-    /// ConcreteCommand Class
+    /// ConcreteCommand class
     /// </summary>
     public sealed class SellStockOrder : IOrder
     {
-        private readonly StockTrade stock;
+        private readonly StockTrade _stock;
 
         public SellStockOrder(StockTrade stock)
         {
-            this.stock = stock;
+            _stock = stock;
         }
 
         public void Execute()
         {
-            this.stock.Sell();
+            _stock.Sell();
         }
     }
 }

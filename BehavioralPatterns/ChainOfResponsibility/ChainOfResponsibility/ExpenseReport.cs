@@ -1,10 +1,10 @@
 ﻿namespace ChainOfResponsibility
 {
-    public class ExpenseReport : IExpenseReport
+    public sealed class ExpenseReport : IExpenseReport
     {
         public ExpenseReport(decimal total)
         {
-            this.Total = total;
+            Total = total;
         }
 
         public decimal Total { get; private set; }

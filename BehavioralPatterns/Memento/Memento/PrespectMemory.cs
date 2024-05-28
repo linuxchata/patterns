@@ -7,25 +7,25 @@ namespace Memento
     /// </summary>
     public sealed class PrespectMemory
     {
-        private readonly Stack<Memento> mementoes;
+        private readonly Stack<Memento> _mementoes;
 
         public PrespectMemory()
         {
-            this.mementoes = new Stack<Memento>();
+            _mementoes = new Stack<Memento>();
         }
 
         public void SaveState(Memento memento)
         {
-            this.mementoes.Push(memento);
+            _mementoes.Push(memento);
         }
 
         public Memento Undo()
         {
             Memento m = null;
-            if (mementoes.Count > 1)
+            if (_mementoes.Count > 1)
             {
-                mementoes.Pop();
-                m = mementoes.Peek();
+                _mementoes.Pop();
+                m = _mementoes.Peek();
             }
             return m;
         }

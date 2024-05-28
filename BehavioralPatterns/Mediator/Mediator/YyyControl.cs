@@ -9,16 +9,16 @@ namespace Mediator
     /// </summary>
     public sealed class YyyControl : IAirTraficControl
     {
-        private readonly HashSet<Aircraft> aircraftUnderGuidence;
+        private readonly HashSet<Aircraft> _aircraftUnderGuidence;
 
         public YyyControl()
         {
-            this.aircraftUnderGuidence = new HashSet<Aircraft>();
+            _aircraftUnderGuidence = new HashSet<Aircraft>();
         }
 
         public void ReceiveAircraftLocation(Aircraft aircraft)
         {
-            foreach (var currentAircraft in this.aircraftUnderGuidence.Where(a => !a.Equals(aircraft)))
+            foreach (var currentAircraft in _aircraftUnderGuidence.Where(a => !a.Equals(aircraft)))
             {
                 if (Math.Abs(currentAircraft.Altitude - aircraft.Altitude) < 500)
                 {
@@ -29,9 +29,9 @@ namespace Mediator
 
         public void RegisterAircraftUnderGuidence(Aircraft aircraft)
         {
-            if (!this.aircraftUnderGuidence.Contains(aircraft))
+            if (!_aircraftUnderGuidence.Contains(aircraft))
             {
-                this.aircraftUnderGuidence.Add(aircraft);
+                _aircraftUnderGuidence.Add(aircraft);
                 Console.WriteLine(aircraft.GetType().Name + " " + aircraft.CallSign + " is under control.");
             }
         }

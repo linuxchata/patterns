@@ -7,32 +7,32 @@ namespace ChainOfResponsibility
     /// </summary>
     public sealed class ExpenseHandler : IExpenseHandler
     {
-        private readonly IExpenseApprover approver;
+        private readonly IExpenseApprover _approver;
 
-        private IExpenseHandler nextApprover;
+        private IExpenseHandler _nextApprover;
 
         public ExpenseHandler(IExpenseApprover approver)
         {
-            this.approver = approver;
-            this.nextApprover = new EndOfChainHandler();
+            _approver = approver;
+            _nextApprover = new EndOfChainHandler();
         }
 
         public ApprovalResponse Approve(IExpenseReport report)
         {
-            var response = this.approver.ApproveExpense(report);
+            var response = _approver.ApproveExpense(report);
 
             if (response == ApprovalResponse.BeyondApprovalLimit)
             {
-                return this.nextApprover.Approve(report);
+                return _nextApprover.Approve(report);
             }
 
-            Console.WriteLine("    Report was approved by {0}", ((Employee)approver).Name.ToUpper());
+            Console.WriteLine("    Report was approved by {0}", ((Employee)_approver).Name.ToUpper());
             return response;
         }
 
         public void SetNext(IExpenseHandler next)
         {
-            this.nextApprover = next;
+            _nextApprover = next;
         }
     }
 }

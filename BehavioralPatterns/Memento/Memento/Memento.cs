@@ -7,9 +7,9 @@
     {
         public Memento(string name, string phone, decimal budget)
         {
-            this.Name = name;
-            this.Phone = phone;
-            this.Budget = budget;
+            Name = name;
+            Phone = phone;
+            Budget = budget;
         }
 
         public string Name { get; set; }

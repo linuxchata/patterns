@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Template
+namespace TemplateMethod
 {
     /// <summary>
     /// A 'ConcreteClass' class
@@ -9,12 +9,12 @@ namespace Template
     {
         public UpsOrderShipment(string address)
         {
-            this.Address = address;
+            Address = address;
         }
 
         protected override void GetShippingLabelFromCarrier()
         {
-            this.Label = $"UPS:[{this.Address}]";
+            Label = $"UPS:[{Address}]";
             Console.WriteLine("--> Label has been defined");
         }
     }

@@ -6,7 +6,7 @@ namespace State
     /// A 'ConcreteState' class
     /// Red indicates that account is overdrawn
     /// </summary>
-    public class RedState : State
+    public sealed class RedState : State
     {
         public RedState(State state)
             : this(state.Balance, state.Account)
@@ -15,23 +15,23 @@ namespace State
 
         public RedState(decimal balance, Account account)
         {
-            this.Balance = balance;
-            this.Account = account;
-            this.Initialize();
+            Balance = balance;
+            Account = account;
+            Initialize();
         }
 
         private void Initialize()
         {
-            this.Interest = 0m;
-            this.LowerLimit = -100m;
-            this.UpperLimit = 0m;
+            Interest = 0m;
+            LowerLimit = -100m;
+            UpperLimit = 0m;
         }
 
         public override void Deposit(decimal amount)
         {
-            this.Balance += amount;
+            Balance += amount;
             Console.WriteLine("Deposited {0:0.00}$", amount);
-            this.CheckState();
+            CheckState();
         }
 
         public override void Withdraw(decimal amount)
@@ -46,9 +46,9 @@ namespace State
 
         private void CheckState()
         {
-            if (this.Balance > this.UpperLimit)
+            if (Balance > UpperLimit)
             {
-                this.Account.State = new SilverState(this);
+                Account.State = new SilverState(this);
             }
         }
     }

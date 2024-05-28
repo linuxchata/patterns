@@ -2,19 +2,19 @@
 {
     public sealed class Employee : IExpenseApprover
     {
-        private readonly decimal approvalLimit;
+        private readonly decimal _approvalLimit;
 
         public Employee(string name, decimal approvalLimit)
         {
-            this.Name = name;
-            this.approvalLimit = approvalLimit;
+            Name = name;
+            _approvalLimit = approvalLimit;
         }
 
         public string Name { get; private set; }
 
         public ApprovalResponse ApproveExpense(IExpenseReport report)
         {
-            return report.Total > this.approvalLimit
+            return report.Total > _approvalLimit
                 ? ApprovalResponse.BeyondApprovalLimit
                 : ApprovalResponse.Approved;
         }

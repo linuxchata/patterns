@@ -3,7 +3,7 @@
 namespace Command2
 {
     /// <summary>
-    /// Receiver class
+    /// The receiver class
     /// </summary>
     public sealed class StockTrade
     {

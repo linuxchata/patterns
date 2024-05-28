@@ -4,27 +4,27 @@ using System.Collections.Generic;
 namespace Command2
 {
     /// <summary>
-    /// Invoker
+    /// The invoker class
     /// </summary>
     public sealed class Agent
     {
-        private List<IOrder> ordersQueue;
+        private readonly List<IOrder> _ordersQueue;
 
         public Agent(string name)
         {
-            this.Name = name;
-            this.ordersQueue = new List<IOrder>();
+            Name = name;
+            _ordersQueue = new List<IOrder>();
         }
 
         public string Name { get; private set; }
 
         public void PlaceOrder(IOrder order)
         {
-            this.ordersQueue.Add(order);
-            Console.Write("{0} to ", this.Name);
+            _ordersQueue.Add(order);
+            Console.Write("{0} to ", Name);
             order.Execute();
             Console.WriteLine();
-            this.ordersQueue.Remove(order);
+            _ordersQueue.Remove(order);
         }
     }
 }

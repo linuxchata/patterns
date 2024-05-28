@@ -5,16 +5,16 @@
     /// </summary>
     public sealed class ShippingService
     {
-        private readonly IShippingStrategy strategy;
+        private readonly IShippingStrategy _strategy;
 
         public ShippingService(IShippingStrategy strategy)
         {
-            this.strategy = strategy;
+            _strategy = strategy;
         }
 
         public decimal CalculateShippingCost()
         {
-            return this.strategy.Calculate();
+            return _strategy.Calculate();
         }
     }
 }

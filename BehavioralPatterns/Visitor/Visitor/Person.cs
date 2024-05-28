@@ -9,14 +9,14 @@ namespace Visitor
     {
         public Person()
         {
-            this.Assets = new List<IAsset>();
+            Assets = new List<IAsset>();
         }
 
         public List<IAsset> Assets { get; set; }
 
         public void Accept(IVisitor visitor)
         {
-            foreach (var asset in this.Assets)
+            foreach (var asset in Assets)
             {
                 asset.Accept(visitor);
             }

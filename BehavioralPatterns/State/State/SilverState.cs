@@ -6,7 +6,7 @@ namespace State
     /// A 'ConcreteState' class
     /// Silver indicates a non-interest bearing state
     /// </summary>
-    public class SilverState : State
+    public sealed class SilverState : State
     {
         public SilverState(State state)
             : this(state.Balance, state.Account)
@@ -15,47 +15,47 @@ namespace State
 
         public SilverState(decimal balance, Account account)
         {
-            this.Balance = balance;
-            this.Account = account;
-            this.Initialize();
+            Balance = balance;
+            Account = account;
+            Initialize();
         }
 
         private void Initialize()
         {
-            this.Interest = 0m;
-            this.LowerLimit = 0m;
-            this.UpperLimit = 1000m;
+            Interest = 0m;
+            LowerLimit = 0m;
+            UpperLimit = 1000m;
         }
 
         public override void Deposit(decimal amount)
         {
-            this.Balance += amount;
+            Balance += amount;
             Console.WriteLine("Deposited {0:0.00}$", amount);
-            this.CheckState();
+            CheckState();
         }
 
         public override void Withdraw(decimal amount)
         {
-            this.Balance -= amount;
+            Balance -= amount;
             Console.WriteLine("Withdrew {0:0.00}$", amount);
-            this.CheckState();
+            CheckState();
         }
 
         public override void PayInerest()
         {
-            this.Balance += this.Balance * this.Interest;
-            this.CheckState();
+            Balance += Balance * Interest;
+            CheckState();
         }
 
         private void CheckState()
         {
-            if (this.Balance < this.LowerLimit)
+            if (Balance < LowerLimit)
             {
-                this.Account.State = new RedState(this);
+                Account.State = new RedState(this);
             }
-            else if (this.Balance > this.UpperLimit)
+            else if (Balance > UpperLimit)
             {
-                this.Account.State = new GoldState(this);
+                Account.State = new GoldState(this);
             }
         }
     }

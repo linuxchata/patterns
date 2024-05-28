@@ -19,26 +19,31 @@ namespace Memento
 
             prospect.PrintState();
 
-            var m = new PrespectMemory();
-            m.SaveState(prospect.SaveMemento());
+            var prespectMemory = new PrespectMemory();
+            prespectMemory.SaveState(prospect.SaveMemento());
 
             prospect.Name = "Leo Welch";
-            m.SaveState(prospect.SaveMemento());
+            prespectMemory.SaveState(prospect.SaveMemento());
             prospect.PrintState();
 
             prospect.Phone = "(310) 209-7111";
-            m.SaveState(prospect.SaveMemento());
+            prespectMemory.SaveState(prospect.SaveMemento());
             prospect.PrintState();
 
             prospect.Budget = 1000000.0m;
-            m.SaveState(prospect.SaveMemento());
+            prespectMemory.SaveState(prospect.SaveMemento());
             prospect.PrintState();
 
-            prospect.RestoreMemento(m.Undo());
-            prospect.RestoreMemento(m.Undo());
-            prospect.RestoreMemento(m.Undo());
+            Console.WriteLine("Restoring the states...");
+            Console.WriteLine();
+
+            prospect.RestoreMemento(prespectMemory.Undo());
             prospect.PrintState();
-            
+            prospect.RestoreMemento(prespectMemory.Undo());
+            prospect.PrintState();
+            prospect.RestoreMemento(prespectMemory.Undo());
+            prospect.PrintState();
+
             Console.ReadKey();
         }
     }

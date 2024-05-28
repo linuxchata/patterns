@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Interpreter.TerminalExpression;
 
 namespace Interpreter.NonterminalExpression
 {
@@ -11,11 +10,11 @@ namespace Interpreter.NonterminalExpression
         /// <summary>
         /// Maintains instance variables of type IExpression for each of the symbols R1 through Rn.
         /// </summary>
-        private readonly List<IExpression> ingredients;
+        private readonly List<IExpression> _ingredients;
 
         public Ingredients(List<IExpression> ingredients)
         {
-            this.ingredients = ingredients;
+            _ingredients = ingredients;
         }
 
         /// <summary>
@@ -25,7 +24,7 @@ namespace Interpreter.NonterminalExpression
         /// <param name="context"></param>
         public void Interpret(Context context)
         {
-            foreach (var ingredient in this.ingredients)
+            foreach (var ingredient in _ingredients)
             {
                 ingredient.Interpret(context);
             }

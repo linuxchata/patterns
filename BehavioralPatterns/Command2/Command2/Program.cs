@@ -10,14 +10,17 @@ namespace Command2
     {
         public static void Main(string[] args)
         {
-            var stock = new StockTrade();
+            // The receiver class
+            var stockTrade = new StockTrade();
 
-            var buyStockOrder = new BuyStockOrder(stock);
-            var sellStockOrder = new SellStockOrder(stock);
+            // Concrete commands classes
+            var buyStockOrder = new BuyStockOrder(stockTrade);
+            var sellStockOrder = new SellStockOrder(stockTrade);
 
+            // The invoker class
             var agent = new Agent("Patrik Bank");
-            agent.PlaceOrder(buyStockOrder); // Buy Shares
-            agent.PlaceOrder(sellStockOrder); // Sell Shares
+            agent.PlaceOrder(buyStockOrder); // Buy shares
+            agent.PlaceOrder(sellStockOrder); // Sell shares
 
             Console.ReadKey();
         }

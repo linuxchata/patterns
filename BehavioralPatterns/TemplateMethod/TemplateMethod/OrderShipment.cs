@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Template
+namespace TemplateMethod
 {
     /// <summary>
     /// The 'AbstractClass' abstract class
@@ -16,19 +16,19 @@ namespace Template
         /// </summary>
         public void Ship()
         {
-            this.VerifyShippingData();
-            this.GetShippingLabelFromCarrier();
-            this.PrintLabel();
+            VerifyShippingData();
+            GetShippingLabelFromCarrier();
+            PrintLabel();
         }
 
         protected virtual void VerifyShippingData()
         {
-            if (string.IsNullOrEmpty(this.Address))
+            if (string.IsNullOrEmpty(Address))
             {
-                throw new ArgumentNullException(nameof(this.Address), "Address cannot be null");
+                throw new ArgumentNullException(nameof(Address), "Address cannot be null");
             }
 
-            Console.WriteLine($"--> Address is {this.Address}");
+            Console.WriteLine($"--> Address is {Address}");
             Console.WriteLine("--> Address has been verified");
         }
 
@@ -36,7 +36,7 @@ namespace Template
 
         protected virtual void PrintLabel()
         {
-            Console.WriteLine($"--> Label is {this.Label}");
+            Console.WriteLine($"--> Label is {Label}");
             Console.WriteLine("--> Label has been printed");
         }
     }

@@ -9,27 +9,27 @@ namespace Interpreter
     /// </summary>
     public sealed class Sandwich : IExpression
     {
-        private readonly Bread topBread;
-        private readonly Ingredients ingredients;
-        private readonly Bread bottomBread;
+        private readonly Bread _topBread;
+        private readonly Ingredients _ingredients;
+        private readonly Bread _bottomBread;
 
         public Sandwich(Bread topBread, Ingredients ingredients, Bread bottomBread)
         {
-            this.topBread = topBread;
-            this.ingredients = ingredients;
-            this.bottomBread = bottomBread;
+            _topBread = topBread;
+            _ingredients = ingredients;
+            _bottomBread = bottomBread;
         }
 
         public void Interpret(Context context)
         {
             context.Output += "|";
-            this.topBread.Interpret(context);
+            _topBread.Interpret(context);
             context.Output += "|";
             context.Output += " << ";
-            this.ingredients.Interpret(context);
+            _ingredients.Interpret(context);
             context.Output += " >> ";
             context.Output += "|";
-            this.bottomBread.Interpret(context);
+            _bottomBread.Interpret(context);
             context.Output += "|";
 
             Console.WriteLine(context.Output);

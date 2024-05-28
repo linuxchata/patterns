@@ -15,24 +15,24 @@ namespace Memento
 
         public Memento SaveMemento()
         {
-            return new Memento(this.Name, this.Phone, this.Budget);
+            return new Memento(Name, Phone, Budget);
         }
 
         public void RestoreMemento(Memento memento)
         {
             if (memento != null)
             {
-                this.Name = memento.Name;
-                this.Phone = memento.Phone;
-                this.Budget = memento.Budget;
+                Name = memento.Name;
+                Phone = memento.Phone;
+                Budget = memento.Budget;
             }
         }
 
         public void PrintState()
         {
-            Console.WriteLine("Name " + this.Name);
-            Console.WriteLine("Phone " + this.Phone);
-            Console.WriteLine("Budget " + this.Budget);
+            Console.WriteLine("Name: " + Name);
+            Console.WriteLine("Phone: " + Phone);
+            Console.WriteLine("Budget: " + Budget);
             Console.WriteLine();
         }
     }

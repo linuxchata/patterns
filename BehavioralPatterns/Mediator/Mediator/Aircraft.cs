@@ -7,16 +7,16 @@ namespace Mediator
     /// </summary>
     public abstract class Aircraft
     {
-        private readonly IAirTraficControl atc;
+        private readonly IAirTraficControl _airTraficControl;
 
-        private int altitude;
+        private int _altitude;
 
-        protected Aircraft(string callSign, IAirTraficControl atc)
+        protected Aircraft(string callSign, IAirTraficControl airTraficControl)
         {
-            this.atc = atc;
-            this.CallSign = callSign;
+            _airTraficControl = airTraficControl;
+            CallSign = callSign;
 
-            this.atc.RegisterAircraftUnderGuidence(this);
+            _airTraficControl.RegisterAircraftUnderGuidence(this);
         }
 
         public string CallSign { get; private set; }
@@ -25,15 +25,15 @@ namespace Mediator
         {
             get
             {
-                return this.altitude;
+                return _altitude;
             }
             set
             {
-                this.altitude = value;
+                _altitude = value;
 
-                Console.WriteLine(this.GetType().Name + " " + this.CallSign + " is on " + this.altitude + " altitude.");
+                Console.WriteLine(GetType().Name + " " + CallSign + " is on " + _altitude + " altitude.");
 
-                atc.ReceiveAircraftLocation(this);
+                _airTraficControl.ReceiveAircraftLocation(this);
             }
         }
 
@@ -41,7 +41,7 @@ namespace Mediator
 
         public void Climb(int climb)
         {
-            this.Altitude += climb;
+            Altitude += climb;
         }
 
         public override bool Equals(object obj)
@@ -52,12 +52,17 @@ namespace Mediator
                 return false;
             }
 
-            return string.Equals(this.CallSign, other.CallSign, StringComparison.OrdinalIgnoreCase);
+            return string.Equals(CallSign, other.CallSign, StringComparison.OrdinalIgnoreCase);
         }
 
         public override int GetHashCode()
         {
-            return this.CallSign.GetHashCode();
+            return CallSign.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return GetType().Name + " is on " + _altitude + " altitude.";
         }
     }
 }

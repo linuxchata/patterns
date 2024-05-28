@@ -29,8 +29,8 @@ namespace ChainOfResponsibility
 
             var employees = new List<Employee>
             {
-                new Employee("Pylyp", 0m),
-                new Employee("Hasham", 100m),
+                new Employee("Oliver", 0m),
+                new Employee("Jonh", 100m),
                 new Employee("Annalisa", 1000m),
                 new Employee("Isabel", 10000m)
             };
@@ -60,8 +60,8 @@ namespace ChainOfResponsibility
             Console.WriteLine("Chain of Responsibility");
 
             var report = new ExpenseReport(2000m);
-            var eh1 = new ExpenseHandler(new Employee("Pylyp", 0m));
-            var eh2 = new ExpenseHandler(new Employee("Hasham", 100m));
+            var eh1 = new ExpenseHandler(new Employee("Oliver", 0m));
+            var eh2 = new ExpenseHandler(new Employee("Jonh", 100m));
             var eh3 = new ExpenseHandler(new Employee("Annalisa", 1000m));
             var eh4 = new ExpenseHandler(new Employee("Isabel", 10000m));
 

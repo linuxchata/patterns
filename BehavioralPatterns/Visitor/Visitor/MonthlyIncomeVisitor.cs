@@ -9,17 +9,17 @@
 
         public void Visit(RealEstate realEstate)
         {
-            this.Total += realEstate.MonthlyRent;
+            Total += realEstate.MonthlyRent;
         }
 
         public void Visit(BankAccount bankAccount)
         {
-            this.Total += bankAccount.Amount * bankAccount.MonthlyInterest;
+            Total += bankAccount.Amount * bankAccount.MonthlyInterest;
         }
 
         public void Visit(Loan loan)
         {
-            this.Total -= loan.MonthlyPayment;
+            Total -= loan.MonthlyPayment;
         }
     }
 }
